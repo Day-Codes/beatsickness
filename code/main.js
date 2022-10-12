@@ -63,7 +63,7 @@ scene("game", () => {
 
 	// move the food every frame, destroy it if far outside of screen
 	action("food", (food) => {
-		food.move(-food.speed, 0);
+		food.move(-food.speed, 70);
 		if (food.pos.x < -120) {
 			destroy(food);
 		}
@@ -78,7 +78,7 @@ scene("game", () => {
 	});
 
 	// score counter
-	let score = 0;
+	let score = 999999999999999;
 
 	const scoreLabel = add([
 		text(score, 32),

@@ -2387,7 +2387,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
       play("bye");
     });
     action("food", (food) => {
-      food.move(-food.speed, 0);
+      food.move(-food.speed, 70);
       if (food.pos.x < -120) {
         destroy(food);
       }
@@ -2399,7 +2399,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
         addKaboom(bomb.pos);
       }
     });
-    let score = 0;
+    let score = 999999999999999;
     const scoreLabel = add([
       text(score, 32),
       pos(12, 12)
